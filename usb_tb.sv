@@ -32,7 +32,7 @@ module usb_tb;
         repeat (3) @(posedge clk);
 
         reset = 0; // release reset
-
+        $display("%4t    %0d     %0d     %0d", $time, clk, reset, count);
         // Run 10 cycles
         repeat (10) begin
             @(posedge clk);
